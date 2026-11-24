@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="cyan">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Tech Profile | ข้อมูลส่วนตัว</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="control-panel">
+        <span class="panel-label">THEME</span>
+        <div class="theme-switcher">
+            <button class="theme-dot" data-theme="cyan" style="--dot:#00D4FF" aria-label="ธีม Cyber Cyan"></button>
+            <button class="theme-dot" data-theme="purple" style="--dot:#C084FC" aria-label="ธีม Neon Purple"></button>
+            <button class="theme-dot" data-theme="matrix" style="--dot:#39FF88" aria-label="ธีม Matrix Green"></button>
+        </div>
+        <span class="panel-divider"></span>
+        <button class="sound-toggle" id="soundToggle" aria-label="เปิด/ปิดเสียง"></button>
+    </div>
+
+    <div class="bg-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <div class="bg-scene" id="bgScene">
+        <div class="star-field" id="starField"></div>
+        <span class="shooting-star s1"></span><span class="shooting-star s2"></span><span class="shooting-star s3"></span>
+        <div class="floating-symbols" id="floatingSymbols"></div>
+    </div>
+
+    <main class="profile-container">
+        <header class="profile-header glass-card">
+            <div class="card-scene" id="cardScene" aria-hidden="true">
+                <div class="star-field" id="cardStars"></div>
+                <div class="forest">
+                    <div class="fx-layer fx-moon" data-depth="4"><span class="moon-halo"></span><span class="moon-halo h2"></span><span class="moon-disc"></span></div>
+                    <div class="fx-layer fx-mtn far" data-depth="8"><svg viewBox="0 0 1440 400" preserveAspectRatio="none"><path d="M0 400 L0 250 L120 190 L240 240 L380 140 L520 230 L650 170 L800 250 L940 120 L1080 220 L1220 170 L1340 230 L1440 190 L1440 400Z"/></svg></div>
+                    <div class="fx-layer fx-fog f1" data-depth="10"><div class="fog-drift"></div></div>
+                    <div class="fx-layer fx-mtn mid" data-depth="16"><svg viewBox="0 0 1440 400" preserveAspectRatio="none"><path d="M0 400 L0 290 L160 220 L300 280 L460 200 L620 290 L780 230 L920 300 L1080 210 L1240 280 L1440 230 L1440 400Z"/></svg></div>
+                    <div class="fx-layer fx-fog f2" data-depth="20"><div class="fog-drift"></div></div>
+                    <div class="fx-layer fx-pines back" data-depth="26" id="pinesBack"></div>
+                    <div class="fx-layer fx-fog f3" data-depth="32"><div class="fog-drift"></div></div>
+                    <div class="fx-layer fx-fireflies" data-depth="36" id="fireflies"></div>
+                    <div class="fx-layer fx-pines front" data-depth="46" id="pinesFront"></div>
+                </div>
+            </div>
+            <div class="status-badge"><span class="pulse-dot"></span> Online / Available</div>
+            <div class="avatar-wrapper" id="profileAvatar" title="คลิกเพื่อดูเอฟเฟกต์">
+                <div class="spinning-ring"></div>
+                <img src="Resources/รูปคนหล่อ.jpg" alt="Profile Picture" class="avatar-img">
+                <div class="tech-verify-badge"><i class="fa-solid fa-microchip"></i></div>
+            </div>
+            <h1 class="full-name">กฤษฎิ์ กมลพัฒนะ <span class="en-name">(Krit K.)</span></h1>
+            <p class="role-title"><i class="fa-solid fa-terminal"></i> Tech Enthusiast &amp; Digital Creator</p>
+            <p class="short-bio">ใช้Aiดีต่อใจเหลือเกิน</p>
+        </header>
+
+        <section class="content-section glass-card">
+            <div class="section-header ripple-trigger" data-target="hobbiesBody">
+                <div class="header-title"><span class="icon-box"><i class="fa-solid fa-gamepad"></i></span><h2>งานอดิเรก <span class="sub-label">Hobbies &amp; Interests</span></h2></div>
+                <i class="fa-solid fa-chevron-down toggle-arrow"></i>
+            </div>
+            <div class="section-body" id="hobbiesBody">
+                <p class="section-hint"><i class="fa-regular fa-hand-pointer"></i> ลองคลิกที่การ์ดแต่ละอันเพื่อดูเอฟเฟกต์</p>
+                <div class="hobbies-grid">
+                    <div class="hobby-card ripple-trigger"><i class="fa-solid fa-laptop-code hobby-icon"></i><span class="hobby-name">เขียนโค้ด / AI</span></div>
+                    <div class="hobby-card ripple-trigger"><i class="fa-solid fa-camera-retro hobby-icon"></i><span class="hobby-name">ถ่ายภาพ</span></div>
+                    <div class="hobby-card ripple-trigger"><i class="fa-solid fa-headphones-simple hobby-icon"></i><span class="hobby-name">ฟังเพลง / พอดแคสต์</span></div>
+                    <div class="hobby-card ripple-trigger"><i class="fa-solid fa-hand-holding-dollar hobby-icon"></i><span class="hobby-name">เทรดหุ้น/ลงทุนหุ้น</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section glass-card">
+            <div class="section-header ripple-trigger" data-target="quoteBody">
+                <div class="header-title"><span class="icon-box"><i class="fa-solid fa-quote-left"></i></span><h2>คำคมประจำใจ <span class="sub-label">Favorite Quote</span></h2></div>
+                <i class="fa-solid fa-chevron-down toggle-arrow"></i>
+            </div>
+            <div class="section-body" id="quoteBody">
+                <div class="quote-box" id="quoteCard"><i class="fa-solid fa-quote-right bg-quote-icon"></i><blockquote id="quoteText">"เทคโนโลยีที่ดีที่สุด คือเทคโนโลยีที่ทำให้ชีวิตผู้คนง่ายขึ้น และเปิดโอกาสให้จินตนาการกลายเป็นความจริง"</blockquote><div class="quote-footer"><cite id="quoteAuthor">— คติประจำใจในการทำงาน</cite><button class="btn-mini-tech ripple-trigger" id="changeQuoteBtn"><i class="fa-solid fa-rotate"></i> สลับคำคม</button></div></div>
+            </div>
+        </section>
+
+        <section class="content-section glass-card contact-section">
+            <div class="contact-cta"><button class="btn-primary-tech ripple-trigger" id="toggleContactBtn" aria-expanded="false"><i class="fa-solid fa-satellite-dish btn-icon"></i><span id="contactBtnText">แสดงช่องทางการติดต่อ</span><i class="fa-solid fa-angles-down arrow-indicator"></i></button></div>
+            <div class="contact-Wrapper" id="contactListWrapper">
+                <p class="contact-instruction"><i class="fa-solid fa-circle-info"></i> คลิกที่การ์ดเพื่อ <strong>ติดต่อได้ทันที</strong></p>
+                <div class="contact-grid">
+                    <a class="contact-card contact-link ripple-trigger" href="tel:0641133186" data-label="โทรศัพท์"><div class="contact-icon phone-color"><i class="fa-solid fa-phone-volume"></i></div><div class="contact-info"><span class="contact-type">เบอร์โทรศัพท์ (Phone)</span><span class="contact-value">0641133186</span></div><span class="copy-badge"><i class="fa-solid fa-phone"></i></span></a>
+                    <a class="contact-card contact-link ripple-trigger" href="mailto:kitk69@nu.ac.th" data-label="อีเมล"><div class="contact-icon email-color"><i class="fa-solid fa-envelope-open-text"></i></div><div class="contact-info"><span class="contact-type">อีเมล (Email)</span><span class="contact-value">kitk69@nu.ac.th</span></div><span class="copy-badge"><i class="fa-solid fa-paper-plane"></i></span></a>
+                    <a class="contact-card contact-link ripple-trigger" href="https://www.facebook.com/matui.duidui/" target="_blank" rel="noopener noreferrer" data-label="Facebook"><div class="contact-icon fb-color"><i class="fa-brands fa-facebook-f"></i></div><div class="contact-info"><span class="contact-type">เฟซบุ๊ก (Facebook)</span><span class="contact-value">Matui Duidui</span></div><span class="copy-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+                    <a class="contact-card contact-link ripple-trigger" href="https://line.me/ti/p/~147ohnjg" target="_blank" rel="noopener noreferrer" data-label="Line"><div class="contact-icon line-color"><i class="fa-brands fa-line"></i></div><div class="contact-info"><span class="contact-type">ไลน์ไอดี (Line ID)</span><span class="contact-value">@147ohnjg</span></div><span class="copy-badge"><i class="fa-solid fa-user-plus"></i></span></a>
+                </div>
+            </div>
+        </section>
+        <footer class="site-footer"><p>© 2026 Designed with <i class="fa-solid fa-bolt text-cyan"></i> Modern Tech Theme</p></footer>
+    </main>
+    <div id="toastNotification" class="toast"><i class="fa-solid fa-circle-check"></i><span id="toastMessage">กำลังเปิดช่องทางติดต่อ...</span></div>
+    <script src="script.js"></script>
+</body>
+</html>
